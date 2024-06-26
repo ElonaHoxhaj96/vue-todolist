@@ -16,10 +16,11 @@ header h1 {
 section{
     display: flex;
    justify-content: center;
+   margin: 2rem;
 }
 /* Setting first ection */
 input{
-    width: 300px;
+    width: 40%;
     font-size: 25px;
     background-color: white;
 }
@@ -29,7 +30,12 @@ input{
     font-weight: bold;
     padding: 0.5rem;
 }
+ul{
+    width: 50%;
+}
 li{
-    color: white;
-    font-size: 18px;
+    width: 100%;
+    background-color: white;
+    border: solid 0.1rem grey;
+    font-size: 20px;
 }
