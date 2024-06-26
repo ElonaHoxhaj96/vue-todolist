@@ -7,30 +7,31 @@
     <!--CSS link  -->
     <link rel="stylesheet" href="style.css">
     <!-- js link script -->
-    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <!-- <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script> -->
 </head>
 <body>
     <header>
         <h1>To Do List</h1>
     </header>
     <main>
-        <!-- Input for the user -->
-        <section id="input_user">
-            <input type="text">
-            <button id="add_item"> Aggiungi </button>
-        </section>
-        <!-- List of thinks  to do  -->
-        <section id="to_do_list">
-            <ul>
-                <li>fare la spesa</li>
-                <li>fare la spesa</li>
-                <li>fare la spesa</li>
-                <li>fare la spesa</li>
-                <li>fare la spesa</li>
-            </ul>
-        </section>
+        <div id="app">
+            <!-- Input for the user -->
+            <section id="input_user">
+                <input type="text" placeholder="Aggiungi qualcosa da fare" v-model="newItem" @keyup.enter="addItem">
+                <button id="add_item_bt" @click="addItem"> Aggiungi </button>
+            </section>
+            <!-- List of thinks  to do  -->
+            <section id="to_do_list">
+                <ul v-if="listItem.length > 0">
+                    <li v-for="(item, index) in listItem" :key="index">
+                        {{listItem[index]}}
+                    </li>
+                </ul>
+            </section>
+        </div>
+       
     </main>
-
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="main.js"></script>
 </body>
 </html>
