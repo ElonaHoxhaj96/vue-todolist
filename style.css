@@ -38,4 +38,15 @@ li{
     background-color: white;
     border: solid 0.1rem grey;
     font-size: 20px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem;
+}
+/* setting list items*/
+.fas{
+    background-color: white;
+}
+
+.sbarra{
+    text-decoration: line-through;
 }

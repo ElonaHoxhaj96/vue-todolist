@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To Do List </title>
+    <!-- fontAwsom -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <!--CSS link  -->
-    <link rel="stylesheet" href="style.css">
-    <!-- js link script -->
-    <!-- <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script> -->
+    <link rel="stylesheet" href="style.css">  
 </head>
 <body>
     <header>
@@ -22,9 +22,10 @@
             </section>
             <!-- List of thinks  to do  -->
             <section id="to_do_list">
-                <ul v-if="listItem.length > 0">
-                    <li v-for="(item, index) in listItem" :key="index">
+                <ul >
+                    <li :class="{ 'sbarra': done }" v-for="(item, index) in listItem" :key="index" @click="remuveItem" >
                         {{listItem[index]}}
+                        <i class="fas fa-times"></i>
                     </li>
                 </ul>
             </section>
