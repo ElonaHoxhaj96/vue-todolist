@@ -13,3 +13,19 @@ header h1 {
 }
 
 /* Setting  Main */
+section{
+    display: flex;
+   justify-content: center;
+}
+/* Setting first ection */
+input{
+    width: 300px;
+    font-size: 25px;
+    background-color: white;
+}
+#add_item{
+    background-color: white;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 0.5rem;
+}
